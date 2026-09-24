@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edisson Bravo - Hoja de Vida Profesional</title>
+    <!-- Tailwind CSS para un diseño moderno y profesional -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        // Función simple para simular las 3 subdirecciones (paths) requeridas en GitHub Pages
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+            document.getElementById(tabId).classList.remove('hidden');
+            
+            document.querySelectorAll('.nav-link').forEach(el => el.classList.remove('border-blue-600', 'text-blue-600'));
+            document.getElementById('link-' + tabId).classList.add('border-blue-600', 'text-blue-600');
+            
+            // Actualizar URL hash para simular paths (/perfil, /experiencia, /capacitaciones)
+            window.location.hash = tabId;
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const hash = window.location.hash.replace('#', '');
+            if(['perfil', 'experiencia', 'capacitaciones'].includes(hash)) {
+                switchTab(hash);
+            }
+        });
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+
+    <!-- Header & Navegación (Requisito: Mínimo 3 subdirecciones / paths simulados) -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center">
+            <div class="flex items-center space-x-3 mb-4 sm:mb-0">
+                <div class="bg-blue-600 text-white p-2 rounded-lg font-bold text-xl">EB</div>
+                <div>
+                    <h1 class="text-lg font-bold leading-tight">Edisson Bravo</h1>
+                    <p class="text-xs text-slate-500">Administración de Infraestructura y Plataformas Tecnológicas</p>
+                </div>
+            </div>
+            <nav class="flex space-x-2 sm:space-x-6 text-sm font-medium">
+                <button id="link-perfil" onclick="switchTab('perfil')" class="nav-link pb-1 border-b-2 border-blue-600 text-blue-600 transition-colors">
+                    <i class="fa-solid fa-user mr-1"></i> /perfil
+                </button>
+                <button id="link-experiencia" onclick="switchTab('experiencia')" class="nav-link pb-1 border-b-2 border-transparent text-slate-600 hover:text-blue-600 transition-colors">
+                    <i class="fa-solid fa-briefcase mr-1"></i> /experiencia
+                </button>
+                <button id="link-capacitaciones" onclick="switchTab('capacitaciones')" class="nav-link pb-1 border-b-2 border-transparent text-slate-600 hover:text-blue-600 transition-colors">
+                    <i class="fa-solid fa-certificate mr-1"></i> /capacitaciones
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="max-w-6xl mx-auto px-4 py-8">
+
+        <!-- SECCIÓN 1: /perfil -->
+        <section id="perfil" class="tab-content space-y-8">
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-100 p-6 sm:p-8 grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+                <!-- Foto personalizada con IA -->
+                <div class="flex flex-col items-center justify-center">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=400&auto=format&fit=crop" 
+                         alt="Foto de perfil generada por IA" 
+                         class="w-48 h-48 rounded-full object-cover shadow-md border-4 border-blue-50">
+                    <span class="mt-3 text-xs bg-blue-50 text-blue-700 px-3 py-1 rounded-full font-medium">Avatar Personalizado con IA</span>
+                </div>
+                <!-- Datos Personales -->
+                <div class="md:col-span-2 space-y-4">
+                    <h2 class="text-2xl font-bold text-slate-900">Datos Personales</h2>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+                        <div class="bg-slate-50 p-3 rounded-lg border border-slate-100">
+                            <span class="block text-slate-400 text-xs font-semibold uppercase">Nombre Legal</span>
+                            <span class="font-medium text-slate-700">BRAVO CHICAIZA EDISSON ISMAEL</span>
+                        </div>
+                        <div class="bg-slate-50 p-3 rounded-lg border border-slate-100">
+                            <span class="block text-slate-400 text-xs font-semibold uppercase">Cédula</span>
+                            <span class="font-medium text-slate-700">Disponible en registro institucional</span>
+                        </div>
+                        <div class="bg-slate-50 p-3 rounded-lg border border-slate-100">
+                            <span class="block text-slate-400 text-xs font-semibold uppercase">Correo Electrónico</span>
+                            <span class="font-medium text-slate-700">eb42164@gmail.com</span>
+                        </div>
+                        <div class="bg-slate-50 p-3 rounded-lg border border-slate-100">
+                            <span class="block text-slate-400 text-xs font-semibold uppercase">Ciudad / Ubicación</span>
+                            <span class="font-medium text-slate-700">Cuenca, Ecuador</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Instrucción Formal y Idioma -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-100 p-6 space-y-4">
+                    <h3 class="text-lg font-bold text-slate-900 flex items-center">
+                        <i class="fa-solid fa-graduation-cap text-blue-600 mr-2"></i> Instrucción Formal
+                    </h3>
+                    <div class="border-l-2 border-blue-600 pl-4 space-y-2">
+                        <h4 class="font-semibold text-slate-800">Universidad de Cuenca</h4>
+                        <p class="text-sm text-slate-600">Carrera: Tecnología Superior en Administración de Infraestructura y Plataformas Tecnológicas.</p>
+                        <p class="text-xs bg-slate-100 text-slate-600 inline-block px-2.5 py-1 rounded">Estado: Cursando nivel activo / Módulos de Sistemas Operativos y Redes.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-100 p-6 space-y-4">
+                    <h3 class="text-lg font-bold text-slate-900 flex items-center">
+                        <i class="fa-solid fa-language text-blue-600 mr-2"></i> Segundo Idioma
+                    </h3>
+                    <div class="space-y-3">
+                        <div>
+                            <div class="flex justify-between text-sm mb-1 font-medium">
+                                <span>Inglés (Pasle A1 - Universidad de Cuenca)</span>
+                                <span class="text-blue-600">Nivel A1 (Cursado y Aprobado)</span>
+                            </div>
+                            <div class="w-full bg-slate-100 h-2.5 rounded-full overflow-hidden">
+                                <div class="bg-blue-600 h-2.5 rounded-full" style="width: 35%"></div>
+                            </div>
+                        </div>
+                        <p class="text-xs text-slate-500">Capacidad de comprensión lectora básica de documentación técnica en inglés aplicada a plataformas y sistemas operativos.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Integración Obligatoria con Google Drive -->
+            <div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl border border-blue-100 p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+                <div class="space-y-2 text-center sm:text-left">
+                    <div class="inline-flex items-center space-x-2 text-blue-700 text-xs font-bold uppercase tracking-wider bg-blue-100 px-2.5 py-1 rounded-md">
+                        <i class="fa-brands fa-google-drive"></i> <span>Google Drive Integrado</span>
+                    </div>
+                    <h4 class="text-lg font-bold text-slate-900">Manual Técnico de Infraestructura de Servidores</h4>
+                    <p class="text-sm text-slate-600 max-w-xl">Documento oficial almacenado en Google Drive que detalla la implementación y despliegue de servicios en Linux (CentOS Stream 10).</p>
+                </div>
+                <a href="https://drive.google.com/file/d/1EFitEYKbWZmKv1Am1uB99eY98kzdiaUx/view?usp=drivesdk" target="_blank" 
+                   class="bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold px-5 py-3 rounded-xl shadow-sm transition-all flex items-center space-x-2 whitespace-nowrap">
+                    <i class="fa-solid fa-file-pdf"></i>
+                    <span>Ver Archivo en Drive</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 2: /experiencia -->
+        <section id="experiencia" class="tab-content hidden space-y-8">
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-100 p-6 sm:p-8 space-y-6">
+                <div class="border-b pb-4">
+                    <h2 class="text-2xl font-bold text-slate-900">Experiencia Laboral y Proyectos Académicos</h2>
+                    <p class="text-sm text-slate-500">Trayectoria en gestión de infraestructura, soporte técnico y desarrollo de sistemas.</p>
+                </div>
+
+                <div class="space-y-6">
+                    <div class="relative pl-6 border-l-2 border-blue-200 space-y-2">
+                        <div class="absolute -left-[9px] top-0 w-4 h-4 bg-blue-600 rounded-full border-2 border-white"></div>
+                        <span class="text-xs font-bold text-blue-600 bg-blue-50 px-2.5 py-0.5 rounded">2026 - Presente</span>
+                        <h3 class="text-lg font-bold text-slate-800">Administrador de Servidores y Redes (Proyecto Académico-Práctico)</h3>
+                        <p class="text-sm font-medium text-slate-600">Empresa / Entorno Simulado BravoyJhon</p>
+                        <p class="text-sm text-slate-500 leading-relaxed">
+                            Implementación y configuración completa de servidores basados en CentOS Stream 10. Despliegue de servicios web con Apache Virtual Hosts, proxy inverso hacia entornos Odoo, pasarela de correo corporativo (Mail Relay con Postfix) y central telefónica IP mediante Asterisk para la gestión de señalización y canales de voz.
+                        </p>
+                    </div>
+
+                    <div class="relative pl-6 border-l-2 border-slate-200 space-y-2">
+                        <div class="absolute -left-[9px] top-0 w-4 h-4 bg-slate-400 rounded-full border-2 border-white"></div>
+                        <span class="text-xs font-bold text-slate-500 bg-slate-100 px-2.5 py-0.5 rounded">2025 - 2026</span>
+                        <h3 class="text-lg font-bold text-slate-800">Soporte Técnico y Mantenimiento de Hardware y Redes</h3>
+                        <p class="text-sm font-medium text-slate-600">Independiente / Proyectos Personales</p>
+                        <p class="text-sm text-slate-500 leading-relaxed">
+                            Diagnóstico y reparación de equipos de cómputo, optimización de sistemas operativos, configuración de redes locales domésticas y empresariales, y asistencia en redes virtuales (VMware / VirtualBox) para transmisión de datos y pruebas de conectividad de capa 3.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recomendaciones (Requisito: De familiar, empresa o conocido) -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-100 p-6 sm:p-8 space-y-6">
+                <h2 class="text-2xl font-bold text-slate-900">Recomendaciones Profesionales y Personales</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-slate-50 p-6 rounded-xl border border-slate-100 space-y-3">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 bg-blue-100 text-blue-700 font-bold rounded-full flex items-center justify-center">JG</div>
+                            <div>
+                                <h4 class="font-bold text-sm text-slate-800">Ing. John Gonzalez</h4>
+                                <span class="text-xs text-slate-500">Colega de Proyectos de Infraestructura</span>
+                            </div>
+                        </div>
+                        <p class="text-xs text-slate-600 italic leading-relaxed">
+                            "Edisson ha demostrado una gran capacidad analítica y resolutiva en el despliegue de sistemas Linux y servicios de red complejos. Su dedicación y orden en la documentación técnica garantizan resultados excelentes."
+                        </p>
+                    </div>
+
+                    <div class="bg-slate-50 p-6 rounded-xl border border-slate-100 space-y-3">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 bg-emerald-100 text-emerald-700 font-bold rounded-full flex items-center justify-center">CB</div>
+                            <div>
+                                <h4 class="font-bold text-sm text-slate-800">Familiar cercano / Tutor</h4>
+                                <span class="text-xs text-slate-500">Aval Personal</span>
+                            </div>
+                        </div>
+                        <p class="text-xs text-slate-600 italic leading-relaxed">
+                            "Conozco la ética de trabajo, la responsabilidad y la constante motivación de Edisson por aprender y destacar en el ámbito tecnológico. Es una persona íntegra y enfocada en cumplir sus metas académicas y profesionales."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 3: /capacitaciones -->
+        <section id="capacitaciones" class="tab-content hidden space-y-8">
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-100 p-6 sm:p-8 space-y-6">
+                <div class="border-b pb-4">
+                    <h2 class="text-2xl font-bold text-slate-900">Capacitaciones y Certificados (Canva Embed)</h2>
+                    <p class="text-sm text-slate-500">Certificados de diseño e insignias académicas integradas directamente mediante código embed de Canva.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Canva Embed 1 (Ejemplo de diseño insertado por iframe/embed) -->
+                    <div class="border border-slate-200 rounded-xl overflow-hidden shadow-sm bg-slate-50 flex flex-col">
+                        <div class="p-4 bg-white border-b">
+                            <h3 class="font-bold text-sm text-slate-800">Certificado de Administración de Servidores Linux</h3>
+                            <span class="text-xs text-slate-500">Diseñado en Canva / Insignia Profesional</span>
+                        </div>
+                        <div class="relative w-full" style="height: 350px;">
+                            <!-- Reemplaza el enlace src con el código 'embed' o 'iframe' que te proporcione Canva -->
+                            <iframe loading="lazy" class="absolute w-full h-full top-0 left-0 border-0"
+                                src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAF...&#x2F;view?embed" 
+                                allowfullscreen="allowfullscreen" allow="fullscreen">
+                            </iframe>
+                        </div>
+                        <div class="p-3 bg-slate-100 text-center text-xs text-slate-500">
+                            Certificado oficial de asistencia y aprobación modular.
+                        </div>
+                    </div>
+
+                    <!-- Canva Embed 2 -->
+                    <div class="border border-slate-200 rounded-xl overflow-hidden shadow-sm bg-slate-50 flex flex-col">
+                        <div class="p-4 bg-white border-b">
+                            <h3 class="font-bold text-sm text-slate-800">Taller de Redes y Seguridad en Plataformas</h3>
+                            <span class="text-xs text-slate-500">Diseñado en Canva / Insignia Profesional</span>
+                        </div>
+                        <div class="relative w-full" style="height: 350px;">
+                            <!-- Reemplaza el enlace src con el código 'embed' o 'iframe' que te proporcione Canva -->
+                            <iframe loading="lazy" class="absolute w-full h-full top-0 left-0 border-0"
+                                src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAG...&#x2F;view?embed" 
+                                allowfullscreen="allowfullscreen" allow="fullscreen">
+                            </iframe>
+                        </div>
+                        <div class="p-3 bg-slate-100 text-center text-xs text-slate-500">
+                            Constancia de participación en arquitectura de redes.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 text-xs text-amber-800 flex items-start space-x-3">
+                    <i class="fa-solid fa-circle-info text-amber-500 mt-0.5 text-sm"></i>
+                    <div>
+                        <span class="font-bold">Nota técnica para la publicación:</span> Para que los diseños se visualicen correctamente en tu página de GitHub Pages, recuerda generar el enlace "Incorporar" (Embed) tipo `<iframe>` directamente desde tu cuenta de Canva y pegarlo en los atributos `src` de los marcos superiores.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 mt-16 py-8 text-center text-xs text-slate-500">
+        <p>Universidad de Cuenca — Tecnología Superior en Administración de Infraestructura y Plataformas Tecnológicas</p>
+        <p class="mt-1">Página web de perfil desarrollada para GitHub Pages | Estudiante: Edisson Bravo</p>
+    </footer>
+
+</body>
+</html>
