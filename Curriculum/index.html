@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edisson Bravo | Perfil Profesional</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="selection:bg-emerald-500 selection:text-white pb-12">
+
+  <!-- Resplandores decorativos -->
+  <div class="fixed top-0 right-10 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+  <div class="fixed bottom-10 left-10 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+  <div class="max-w-4xl mx-auto px-5 py-6 relative z-10">
+    
+    <!-- Navbar Limpia -->
+    <header class="sticky top-4 z-50 mb-8">
+      <nav class="nav-glass rounded-2xl p-2.5 flex justify-between items-center shadow-2xl">
+        <span class="text-xs font-black tracking-widest uppercase px-4 py-2 text-emerald-400 bg-emerald-500/10 rounded-xl border border-emerald-500/20">EB.Portfolio</span>
+        <div class="flex gap-1.5 text-sm font-medium">
+          <a href="index.html" class="px-4 py-2 rounded-xl bg-emerald-500/15 text-emerald-400 border border-emerald-500/30 flex items-center gap-2 shadow-sm">
+            <i data-lucide="user" class="w-4 h-4"></i> Perfil
+          </a>
+          <a href="experiencia.html" class="px-4 py-2 rounded-xl text-slate-400 hover:text-white hover:bg-white/5 transition flex items-center gap-2">
+            <i data-lucide="briefcase" class="w-4 h-4"></i> Experiencia
+          </a>
+          <a href="capacitaciones.html" class="px-4 py-2 rounded-xl text-slate-400 hover:text-white hover:bg-white/5 transition flex items-center gap-2">
+            <i data-lucide="award" class="w-4 h-4"></i> Capacitaciones
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Bento Grid Principal -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+      
+      <!-- Bloque Hero / Foto y Nombre (Ocupa 2 columnas) -->
+      <div class="md:col-span-2 bento-card rounded-3xl p-8 flex flex-col sm:flex-row items-center gap-6 relative overflow-hidden">
+        <div class="absolute top-0 right-0 p-8 opacity-10 text-emerald-400">
+          <i data-lucide="terminal" class="w-32 h-32"></i>
+        </div>
+        <img src="Ed.jpg" alt="Edisson Bravo" class="w-32 h-32 rounded-2xl object-cover border-2 border-emerald-500/40 shadow-xl shrink-0">
+        <div class="space-y-2 text-center sm:text-left z-10">
+          <span class="text-xs font-bold uppercase tracking-wider text-emerald-400 bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/20">Infraestructura TI</span>
+          <h1 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-white">Edisson Ismael Bravo Chicaiza</h1>
+          <p class="text-slate-400 text-xs sm:text-sm">Estudiante activo del 3er Ciclo en la Universidad de Cuenca.</p>
+        </div>
+      </div>
+
+      <!-- Bloque Idioma (Destacado) -->
+      <div class="bento-card rounded-3xl p-6 flex flex-col justify-between border-emerald-500/20">
+        <div class="flex items-center justify-between text-emerald-400 mb-2">
+          <i data-lucide="languages" class="w-6 h-6"></i>
+          <span class="text-xs bg-emerald-500/10 px-2.5 py-1 rounded-lg border border-emerald-500/20 font-bold">En curso</span>
+        </div>
+        <div>
+          <h3 class="text-sm font-bold text-white">Segundo Idioma</h3>
+          <p class="text-xs text-slate-300 mt-1">Inglés - Nivel <strong class="text-emerald-400">A2</strong> en desarrollo continuo.</p>
+        </div>
+        <div class="w-full bg-slate-800 h-2 rounded-full mt-4 overflow-hidden">
+          <div class="bg-emerald-400 h-full w-2/3 rounded-full"></div>
+        </div>
+      </div>
+
+      <!-- Bloque Datos Personales (Ocupa 2 columnas) -->
+      <div class="md:col-span-2 bento-card rounded-3xl p-7 space-y-4">
+        <h2 class="text-base font-bold text-white flex items-center gap-2">
+          <i data-lucide="fingerprint" class="text-emerald-400 w-5 h-5"></i> Datos de Identificación y Contacto
+        </h2>
+        <div class="grid sm:grid-cols-2 gap-3 text-xs">
+          <div class="bg-slate-900/50 p-3.5 rounded-xl border border-slate-800">
+            <span class="text-slate-400 block mb-0.5">Nombre Legal Completo</span>
+            <strong class="text-slate-200 text-sm">BRAVO CHICAIZA EDISSON ISMAEL</strong>
+          </div>
+          <div class="bg-slate-900/50 p-3.5 rounded-xl border border-slate-800">
+            <span class="text-slate-400 block mb-0.5">Ciudad de Residencia</span>
+            <strong class="text-slate-200 text-sm">Cuenca, Ecuador</strong>
+          </div>
+          <div class="bg-slate-900/50 p-3.5 rounded-xl border border-slate-800 sm:col-span-2">
+            <span class="text-slate-400 block mb-0.5">Correo Institucional (Universidad de Cuenca)</span>
+            <strong class="text-emerald-400 text-sm flex items-center gap-2">
+              <i data-lucide="mail" class="w-4 h-4"></i> edisson.bravo@ucuenca.edu.ec
+            </strong>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bloque Instrucción Formal -->
+      <div class="bento-card rounded-3xl p-6 flex flex-col justify-between">
+        <div class="text-blue-400 mb-2">
+          <i data-lucide="graduation-cap" class="w-6 h-6"></i>
+        </div>
+        <div class="space-y-1">
+          <span class="text-xs text-blue-400 font-bold uppercase">Universidad de Cuenca</span>
+          <h3 class="text-sm font-bold text-white leading-snug">Tecnología Superior en Administración de Infraestructura</h3>
+          <p class="text-xs text-slate-400 mt-1">Cursando actualmente el <strong class="text-white">Tercer Ciclo</strong>.</p>
+        </div>
+      </div>
+
+      <!-- Bloque Google Drive (Ancho Completo) -->
+      <div class="md:col-span-3 bento-card rounded-3xl p-6 border-emerald-500/30 bg-gradient-to-r from-emerald-950/20 via-slate-900 to-slate-900 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-4 text-center sm:text-left">
+          <div class="p-3 bg-emerald-500/10 text-emerald-400 rounded-2xl border border-emerald-500/20 shrink-0">
+            <i data-lucide="cloud-cog" class="w-7 h-7"></i>
+          </div>
+          <div>
+            <h3 class="text-sm font-bold text-white">Repositorio y Documentación en Google Drive</h3>
+            <p class="text-xs text-slate-400 mt-0.5">Acceso a manuales técnicos de servidores Linux, esquemas de red y configuraciones.</p>
+          </div>
+        </div>
+        <a href="https://drive.google.com/file/d/1EFitEYKbWZmKv1Am1uB99eY98kzdiaUx/view?usp=drivesdk" target="_blank" class="px-5 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-bold text-xs transition flex items-center gap-2 shadow-lg shadow-emerald-500/20 shrink-0">
+          <i data-lucide="external-link" class="w-4 h-4"></i> Ver en Google Drive
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <script>lucide.createIcons();</script>
+</body>
+</html>
